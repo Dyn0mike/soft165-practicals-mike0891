@@ -14,6 +14,7 @@ require_once 'public/header.php';
             Follow the links below to try out your luck.
             <br><br><br><br><br>
             Adjust this main page to provide links to your pages.
+<a  href="map.html">Go to maps</a>
             <br><br><br><br><br>
         </div>
     </div>
