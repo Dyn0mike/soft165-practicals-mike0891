@@ -21,6 +21,7 @@
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="public/sitejs.js" type="text/javascript"></script>
 	<title>SOFT165 Exercise 01</title>
         <link href="public/soft165.css" rel="stylesheet"  type="text/css">
 </head>
