@@ -3,9 +3,9 @@ require_once 'public/header.php';
 
 ?>
 <body class="bg-info">
-    <div class="container-fluid col-md-6 offset-md-3">
+    <div class="container-fluid col-md-5 offset-md-3">
     <div class="row">
-        <div class="card mt-3">
+        <div class="card mt-0">
             <p id="welcomeHead">Welcome to treasure hunt please click a box to find out if you have won.</p>
             <table style="width:100%" border=5>
   <tr>
@@ -24,7 +24,17 @@ require_once 'public/header.php';
       <td id="8"><img src="public/images/box.jpg" style="width:50px;height:60px;"></td>
   </tr>
 </table> 
-            <br><br><br><br><br>
+        </div>
+    </div>
+        <div class="row">
+        <div class="card mt-2">
+            <div id="status">Connecting...</div>
+            <ul id="messages"></ul>
+    <form id="message-form" action="#" method="post">
+      <textarea id="message" placeholder="Write your message here..." required></textarea>
+      <button type="submit">Send Message</button>
+      <button type="button" id="close">Close Connection</button>
+    </form>
         </div>
     </div>
     </div>
