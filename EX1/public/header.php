@@ -1,4 +1,20 @@
-<?php date_default_timezone_set('Europe/London');
+<?php 
+
+if(!isset($_SESSION))
+{
+    session_start();
+}
+
+if(isset($_SESSION['login']))
+{
+    if(isset($_SESSION['Username']))
+    {
+        $Username = $_SESSION['Username'];
+    }
+}
+
+
+date_default_timezone_set('Europe/London');
 
 /* 
  * Application created by Dr Shirley Atkinson for teaching purposes
@@ -21,9 +37,7 @@
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="public/sitejs.js" type="text/javascript"></script>
-        <link rel="stylesheet" href="public/style.css">
-	<title>SOFT165 Exercise 01</title>
+	<title>SOFT165 Exercises</title>
         <link href="public/soft165.css" rel="stylesheet"  type="text/css">
 </head>
 <body class="bg-info">
@@ -45,14 +59,27 @@
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	<ul class="nav navbar-nav navbar-center">
-            <li><h2>SOFT165 Exercise 01<span class='sr-only'>(current)</span></h2></li>
+            <li><h2>SOFT165 Exercises<span class='sr-only'>(current)</span></h2></li>
 	</ul>		
 	</div>
         <div>
             <ul class="nav navbar-nav navbar-right">
             <li class="nav-item active">
                 <p><font size="4">
-                    Welcome
+                 <?php
+                    if(isset($Username))
+                    {
+                        echo "Welcome ".$Username;
+                        echo "<br><br>";
+                        echo "<a href='public/logout.php' class='btn btn-danger'>Logout</a>";
+                    }
+                    else
+                    {
+                        echo "Welcome.  Please log in";
+                        require_once 'public/login.php';
+                    }
+                
+                 ?>
                     
             </li>
         </ul>
